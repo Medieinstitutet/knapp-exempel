@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     // Check on load of component, if animal is fed
-    const storedTime = localStorage.getItem('animal-1-feed-time');
+    const storedTime = localStorage.getItem('animal-1-feed-time'); // TODO: Same ID all the time now
     if (storedTime === null) {
       // Animal has never been fed
     } else {
@@ -31,7 +31,7 @@ function App() {
 
   function feedAnimal() {
     setIsFed(true);
-    localStorage.setItem('animal-1-feed-time', new Date().toString());
+    localStorage.setItem('animal-1-feed-time', new Date().toString());  // TODO: Same ID all the time now
   }
 
   return (
