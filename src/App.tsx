@@ -1,6 +1,17 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
+/**
+ * LOGIK
+ * När sidan laddas, kontrollera om det finns sparat i localStorage ett datum för när djuret är matat
+ * Om JA, kontrollera om det gått mer än 3 timmar sedan matning
+ *  Om JA, aktivera matningsknappen
+ *  Om NEJ, avaktivera matningsknappen
+ * Om NEJ, aktivera matningsknappen
+ * 
+ * Vid klick på matningsknappen, avaktivera knappen och uppdatera datum i localStorage.
+ */
+
 function App() {
   const [isFed, setIsFed] = useState(false);
   const [fedTime, setFedTime] = useState<Date | null>(null);
